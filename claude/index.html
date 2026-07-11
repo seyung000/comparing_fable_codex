@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pixel Minecraft - MVP</title>
+  <style>
+    html, body { margin: 0; padding: 0; overflow: hidden; height: 100%; background: #000; }
+    #crosshair {
+      position: fixed; top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff; font: bold 20px monospace;
+      text-shadow: 0 0 2px #000;
+      pointer-events: none; user-select: none;
+    }
+    #hud {
+      position: fixed; top: 10px; left: 10px;
+      color: #fff; font: 12px monospace;
+      text-shadow: 1px 1px 0 #000;
+      pointer-events: none; user-select: none;
+      line-height: 1.6;
+    }
+    #start-overlay {
+      position: fixed; inset: 0;
+      display: flex; align-items: center; justify-content: center;
+      background: rgba(0,0,0,.6);
+      color: #fff; font: bold 18px monospace;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div id="crosshair">+</div>
+  <div id="hud">
+    WASD: 이동 | Space: 점프 | 좌클릭: 파괴 | 우클릭: 설치<br/>
+    1~4: 블록 선택 (<span id="block-name">잔디</span>)
+  </div>
+  <div id="start-overlay">클릭해서 시작</div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.160.0/three.min.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>

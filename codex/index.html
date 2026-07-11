@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pixel Minecraft MVP</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div id="hud">
+      <div id="crosshair"></div>
+      <div id="status">Click to play</div>
+      <div id="toolbar">
+        <button class="selected" data-block="grass" title="Grass">1</button>
+        <button data-block="dirt" title="Dirt">2</button>
+        <button data-block="stone" title="Stone">3</button>
+        <button data-block="wood" title="Wood">4</button>
+      </div>
+    </div>
+    <script type="module" src="./game.js"></script>
+  </body>
+</html>
